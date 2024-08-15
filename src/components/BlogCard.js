@@ -1,9 +1,19 @@
-// src/components/BlogCard.js
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const BlogCard = ({ title, description, tags, image }) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800 text-white m-4">
+    <motion.div
+      className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 text-white m-4"
+      initial="hidden"
+      animate="visible"
+      variants={cardVariants}
+    >
       <img className="w-full" src={image} alt={title} />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
@@ -26,7 +36,7 @@ const BlogCard = ({ title, description, tags, image }) => {
           Read more →
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons';
 import { faSquareFacebook, faTwitter, faGooglePlusG, faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -39,7 +40,7 @@ const Footer = () => {
                 alt="Company Logo" 
                 className="w-10 h-10 object-cover"
               />
-              <span className="text-2xl font-bold ml-3 text-white">RADSO TECHNOLOGIES</span>
+              <span className="text-2xl font-bold ml-3 text-white">RADSO INNOVATIONS</span>
             </div>
             <p className="mb-5 text-gray-300">
               Semiconductors solutions have transformed our business. Our products will be reliable, efficient and perfectly suited to your needs.
@@ -52,18 +53,18 @@ const Footer = () => {
             </div>
           </div>
           <div>
-          <h3 className="font-bold mb-5 text-white pl-8">Useful Links</h3>
-      <ul className="grid grid-cols-2 gap-x-8 gap-y-3 pl-10">
-        <li><a href="#!" className="hover:text-white">Home</a></li>
-        <li><a href="#!" className="hover:text-white">Services</a></li>
-        <li><a href="#!" className="hover:text-white">Company</a></li>
-        <li><a href="/blog" className="hover:text-white">Blog</a></li>
-        <li><a href="#!" className="hover:text-white">About</a></li>
-        <li><a href="/Contact" className="hover:text-white">Contact</a></li>
-        <li><a href="#!" className="hover:text-white">FAQ</a></li>
-        <li><a href="/terms" className="hover:text-white">Terms and Conditions</a></li>
-        <li><a href="/privacy" className="hover:text-white">Privacy and Policy</a></li>
-      </ul>
+            <h3 className="font-bold mb-5 text-white pl-8">Useful Links</h3>
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 pl-10">
+              <li><Link to="/" className="hover:text-white">Home</Link></li>
+              <li><Link to="/services" className="hover:text-white">Services</Link></li>
+              <li><Link to="/company" className="hover:text-white">Company</Link></li>
+              <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link to="/about" className="hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
+              <li><Link to="/terms" className="hover:text-white">Terms and Conditions</Link></li>
+              <li><Link to="/privacy" className="hover:text-white">Privacy and Policy</Link></li>
+            </ul>
           </div>
           <div>
             <h3 className="font-bold mb-5 text-white">Subscribe</h3>
@@ -76,17 +77,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-black py-10 px-10 mt-30 mb-0 w-full">
-  <div className="container mx-auto px-4 flex justify-center">
-    <div className="flex items-center">
-      <p className="text-center text-gray-300">&copy; 2018, All Rights Reserved</p>
-    </div>
-  </div>
-</div>
-
-     
-     
-
-
+        <div className="container mx-auto px-4 flex justify-center">
+          <div className="flex items-center">
+            <p className="text-center text-gray-300">&copy; 2018, All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

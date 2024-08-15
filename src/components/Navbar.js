@@ -4,7 +4,6 @@ import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 import { Link } from 'react-router-dom';
 
-
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
@@ -18,24 +17,22 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">Radso Technologies</span>
+            <span className="text-xl tracking-tight">Radso Innovations</span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>{item.label}</a>
+                <Link to={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            
-          <Link
-  to="/Contact"
-  className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-600 to-blue-800 text-white"
->
-  Contact Us
-</Link>
-
+            <Link
+              to="/Contact"
+              className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-600 to-blue-800 text-white"
+            >
+              Contact Us
+            </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -48,18 +45,17 @@ const Navbar = () => {
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
             <div className="flex space-x-6 mt-4">
-            
-              <a
-                href="/Contact"
+              <Link
+                to="/Contact"
                 className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-600 to-blue-800 text-white"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         )}

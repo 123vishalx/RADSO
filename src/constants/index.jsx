@@ -10,11 +10,12 @@ import { SquareArrowRight } from 'lucide-react';
 
 export const navItems = [
   { label: "Home", href: "/" },
-  { label: "Company", href: "/company" },
+  { label: "About Us", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Services", href: "/services" },
   { label: "Blog", href: "/blog" },
   { label: "FAQs", href: "/faqs" },
+
 ];
 
 
