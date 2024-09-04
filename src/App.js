@@ -11,6 +11,7 @@ import './index.css';
 import TermsAndConditions from './Pages/TermsAndConditions';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import About from './Pages/About';
+import Product from './Pages/Product';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/terms" element={<TermsAndConditions />} /> 
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/about" element={<About />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </BrowserRouter>
      

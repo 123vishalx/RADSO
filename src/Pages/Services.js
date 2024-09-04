@@ -82,7 +82,7 @@ function Services() {
           <img src={offer2Img} alt="offer" />
           <img src={offer3Img} alt="offer" />
           <div className="offer__content">
-            <h2 className="section__header">Exclusive Offers</h2>
+            <h2 className="section__header">Core Offerings</h2>
             <p className="section__subheader">
               Unlock Special Deals on Advanced Automation Solutions
             </p>
@@ -103,7 +103,7 @@ function Services() {
           <img src={modern2Img} alt="modern" className="modern__img-2" />
           <img src={modern3Img} alt="modern" className="modern__img-3" />
         </div>
-        <div className="modern__content">
+        <div className="modern__content mt-12 md:mt-24">
           <h2 className="section__header">Advanced Automation Solutions</h2>
           <p className="section__subheader">
             Empower Your Business with Our Cutting-Edge Automation Technologies.

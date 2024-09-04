@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import about1 from '../assets/ab1_black_background.png';
 import about3 from '../assets/ab5.png';
 import aboutIcon2 from '../assets/ab2_blue_on_black.png'; 
-import workProcessImg1 from '../assets/work-process-img-1.jpg'; 
-import workProcessImg2 from '../assets/work-process-img-2.jpg'; 
-import workProcessImg3 from '../assets/work-process-img-3.jpg'; 
-import workProcessImg4 from '../assets/work-process-img-4.jpg'; 
+import workProcessImg1 from '../assets/workprocess1.png'; 
+import workProcessImg2 from '../assets/workprocess2.png'; 
+import workProcessImg3 from '../assets/workprocess3.png'; 
+import workProcessImg4 from '../assets/workprocess4.png'; 
 import teamImg1 from '../assets/team-img-1.jpg'; 
 import teamImg2 from '../assets/team-img-2.jpg'; 
 import teamImg3 from '../assets/team-img-3.jpg'; 
@@ -37,52 +37,59 @@ const AboutUsPage = () => {
           animate="visible"
           variants={slideIn}
         >
-          <div className="md:w-1/2 ml-15">
-            <img src={abouti} alt="About Us" className="rounded-lg shadow-lg" />
+          <div className="md:w-1/2 flex justify-center">
+            <img 
+              src={abouti} 
+              alt="About Us" 
+              className="rounded-lg shadow-lg"
+              style={{ 
+                margin: '0 20px', // Margin on both sides
+                maxWidth: '100%',
+                width: 'auto',
+              }}
+            />
           </div>
-          <div className="md:w-1/2 mt-8 md:mt-0 md:pl-10">
+          <div className="md:w-1/2 mt-8 md:mt-0 md:pl-6 lg:pl-10">
             <h6 className="text-blue-500 text-xl uppercase mb-4">— About Us</h6>
             <h2 className="text-3xl md:text-4xl font-bold mb-8">We work on unique design factors</h2>
-            <p className="text-gray-200 mb-10">
+            <p className="text-gray-200 mb-10 leading-relaxed">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their.
             </p>
             <ul className="space-y-6">
-  <li className="flex items-start">
-    <div className="w-12 h-12 mr-4">
-      <img src={about1} alt="Experience Icon" className="w-full h-full object-contain" />
-    </div>
-    <div>
-      <h5 className="text-xl font-bold">12 Years Experience</h5>
-      <p className="text-gray-200">
-        It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text..
-      </p>
-    </div>
-  </li>
-  <li className="flex items-start">
-    <div className="w-12 h-12 mr-4">
-      <img src={aboutIcon2} alt="Tips Icon" className="w-full h-full object-contain" />
-    </div>
-    <div>
-      <h5 className="text-xl font-bold">Unique Tips & Design</h5>
-      <p className="text-gray-200">
-        It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text..
-      </p>
-    </div>
-  </li>
-  <li className="flex items-start">
-  <div className="w-30 h-20 pr-4">
-  <img src={about3} alt="Innovation Icon" className="w-full h-full object-contain" />
-</div>
-
-    <div>
-      <h5 className="text-xl font-bold">Cutting-Edge Industrial IoT Solutions</h5>
-      <p className="text-gray-200">
-        We integrate advanced IoT technologies into industrial environments, enabling real-time data collection and process automation for smarter, more efficient operations...
-      </p>
-    </div>
-  </li>
-</ul>
-
+              <li className="flex items-start">
+                <div className="w-12 h-12 mr-4">
+                  <img src={about1} alt="Experience Icon" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h5 className="text-xl font-bold">12 Years Experience</h5>
+                  <p className="text-gray-200 leading-relaxed">
+                    It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text..
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="w-12 h-12 mr-4">
+                  <img src={aboutIcon2} alt="Tips Icon" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h5 className="text-xl font-bold">Unique Tips & Design</h5>
+                  <p className="text-gray-200 leading-relaxed">
+                    It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text..
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <div className="w-30 h-20 pr-4">
+                  <img src={about3} alt="Innovation Icon" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h5 className="text-xl font-bold">Cutting-Edge Industrial IoT Solutions</h5>
+                  <p className="text-gray-200 leading-relaxed">
+                    We integrate advanced IoT technologies into industrial environments, enabling real-time data collection and process automation for smarter, more efficient operations...
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </motion.div>
       </section>
@@ -142,41 +149,42 @@ const AboutUsPage = () => {
         </div>
       </section>
       <section id="team" className="py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h6 className="text-blue-500 text-xl uppercase mb-2">— Team</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Meet Our Team</h2>
-          <div className="flex flex-wrap justify-center">
-            <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn}>
-              <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <img src={teamImg1} alt="Team Member 1" className="w-full h-55 object-cover rounded-lg mb-4" />
-                <h6 className="text-lg font-bold m-2">Aarav Kapoor</h6>
-                <span className="text-sm text-gray-200">Graphic Designer</span>
-              </div>
-            </motion.div>
-            <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.2 }}>
-              <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <img src={teamImg2} alt="Team Member 2" className="w-full h-55 object-cover rounded-lg mb-4" />
-                <h6 className="text-lg font-bold m-2">Rahul Dravid</h6>
-                <span className="text-sm text-gray-200">Graphic Designer</span>
-              </div>
-            </motion.div>
-            <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.4 }}>
-              <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <img src={teamImg3} alt="Team Member 3" className="w-full h-55 object-cover rounded-lg mb-4" />
-                <h6 className="text-lg font-bold m-2">John Goenka</h6>
-                <span className="text-sm text-gray-200">Graphic Designer</span>
-              </div>
-            </motion.div>
-            <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.6 }}>
-              <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
-                <img src={teamImg4} alt="Team Member 4" className="w-full h-55 object-cover rounded-lg mb-4" />
-                <h6 className="text-lg font-bold m-2">Naksh Singhaniya</h6>
-                <span className="text-sm text-gray-200">Graphic Designer</span>
-              </div>
-            </motion.div>
-          </div>
+  <div className="container mx-auto px-4 text-center">
+    <h6 className="text-blue-500 text-xl uppercase mb-2">— Team</h6>
+    <h2 className="text-3xl md:text-4xl font-bold mb-12">Meet Our Team</h2>
+    <div className="flex flex-wrap justify-center">
+      <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn}>
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+          <img src={teamImg1} alt="Team Member 1" className="w-full h-55 object-cover rounded-lg mb-4" />
+          <h6 className="text-lg font-bold">Aarav Kapoor</h6>
+          <span className="text-sm text-gray-200">Graphic Designer</span>
         </div>
-      </section>
+      </motion.div>
+      <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.2 }}>
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+          <img src={teamImg2} alt="Team Member 2" className="w-full h-55 object-cover rounded-lg mb-4" />
+          <h6 className="text-lg font-bold">Rahul Dravid</h6>
+          <span className="text-sm text-gray-200">Graphic Designer</span>
+        </div>
+      </motion.div>
+      <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.4 }}>
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+          <img src={teamImg3} alt="Team Member 3" className="w-full h-55 object-cover rounded-lg mb-4" />
+          <h6 className="text-lg font-bold">John Goenka</h6>
+          <span className="text-sm text-gray-200">Graphic Designer</span>
+        </div>
+      </motion.div>
+      <motion.div className="w-full md:w-1/4 p-4" initial="hidden" animate="visible" variants={fadeIn} transition={{ delay: 0.6 }}>
+        <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+          <img src={teamImg4} alt="Team Member 4" className="w-full h-55 object-cover rounded-lg mb-4" />
+          <h6 className="text-lg font-bold">Naksh Singhaniya</h6>
+          <span className="text-sm text-gray-200">Graphic Designer</span>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
       <Footer />
     </div>
   );
