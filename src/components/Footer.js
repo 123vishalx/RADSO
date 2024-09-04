@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-bold mb-5 text-white pl-8">Useful Links</h3>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 pl-10">
+            <ul className="grid grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-3 pl-10 md:grid-cols-1 md:space-y-2 lg:space-y-0">
               <li><Link to="/" className="hover:text-white">Home</Link></li>
               <li><Link to="/services" className="hover:text-white">Services</Link></li>
               <li><Link to="/company" className="hover:text-white">Company</Link></li>
@@ -79,7 +79,7 @@ const Footer = () => {
       <div className="bg-black py-10 px-10 mt-30 mb-0 w-full">
         <div className="container mx-auto px-4 flex justify-center">
           <div className="flex items-center">
-            <p className="text-center text-gray-300">&copy; 2018, All Rights Reserved</p>
+            <p className="text-center text-gray-300">&copy; 2024, All Rights Reserved</p>
           </div>
         </div>
       </div>

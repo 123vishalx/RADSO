@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import code from "../assets/code.jpg";
+import code from "../assets/code1.png";
 import { checklistItems } from "../constants";
 
 const Workflow = () => {
@@ -23,7 +23,7 @@ const Workflow = () => {
               </div>
               <div>
                 <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                <p className="text-md text-neutral-500">{item.description}</p>
+                <p className="text-md text-neutral-200">{item.description}</p>
               </div>
             </div>
           ))}

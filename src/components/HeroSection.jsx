@@ -3,7 +3,7 @@ import video2 from "../assets/video2.mp4";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div className="flex flex-col items-center mt-6 lg:mt-20 px-4"> {/* Added px-4 for padding */}
       <h1 className="text-3xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         Industrial Product and
         <span className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text">
@@ -11,9 +11,8 @@ const HeroSection = () => {
           Automation Services
         </span>
       </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
+      <p className="mt-10 text-lg text-center text-neutral-200 max-w-6xl">
         Transform your manufacturing processes with our cutting-edge automation solutions. From assembly automation to advanced industrial products, we provide the tools and technology to enhance efficiency and productivity.
-      
       </p>
       <div className="flex justify-center my-10">
         <a
@@ -22,16 +21,17 @@ const HeroSection = () => {
         >
           Get Quotation
         </a>
-        <a href="!#" className="py-3 px-4 mx-3 rounded-md border">
+        <a href="#!" className="py-3 px-4 mx-3 rounded-md border">
           Call Radso
         </a>
       </div>
-      <div className="flex mt-10 justify-center">
+      <div className="flex flex-col sm:flex-row mt-10 justify-center">
         <video
           autoPlay
           loop
           muted
-          className="rounded-lg w-/5 border border--700 shadow-sm shadow-blue-400 mx-2 my-4"
+          className="rounded-lg w-full sm:w-5/6 md:w-1/2 lg:w-3/5 xl:w-3/4 border border-blue-700 shadow-sm shadow-blue-400 mx-2 my-4"
+          style={{ paddingLeft: '10px', paddingRight: '10px' }} // Added padding to the video
         >
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
@@ -40,7 +40,8 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-/5 border border-blue-700 shadow-sm shadow-blue-400 mx-2 my-4"
+          className="rounded-lg w-full sm:w-5/6 md:w-1/2 lg:w-3/5 xl:w-3/4 border border-blue-700 shadow-sm shadow-blue-400 mx-2 my-4"
+          style={{ paddingLeft: '10px', paddingRight: '10px' }} // Added padding to the video
         >
           <source src={video2} type="video/mp4" />
           Your browser does not support the video tag.

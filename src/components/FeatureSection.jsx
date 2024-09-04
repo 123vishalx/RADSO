@@ -13,7 +13,7 @@ const FeatureSection = () => {
             Industrial Automation
           </span>
         </h2>
-        <p className="text-lg sm:text-xl lg:text-2xl mt-5 lg:mt-10 text-neutral-400">
+        <p className="text-lg sm:text-xl lg:text-2xl mt-5 lg:mt-10 text-neutral-200">
           Discover our innovative solutions for industrial products and automation services
         </p>
       </div>
@@ -25,8 +25,8 @@ const FeatureSection = () => {
                 {feature.icon}
               </div>
               <div className="mt-4">
-                <h5 className="text-xl mt-1 mb-6 font-semibold text-white">{feature.text}</h5>
-                <p className="text-md p-2 text-neutral-500">
+                <h5 className="text-xl mt-1 mb-6 font-semibold text-white-200">{feature.text}</h5>
+                <p className="text-md p-2 text-neutral-200">
                   {feature.description}
                 </p>
               </div>
